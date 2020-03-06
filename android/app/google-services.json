@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "169209377424",
+    "firebase_url": "https://medifo-df36a.firebaseio.com",
+    "project_id": "medifo-df36a",
+    "storage_bucket": "medifo-df36a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:169209377424:android:544e05bc22934b5ad29e15",
+        "android_client_info": {
+          "package_name": "com.example.medifo1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "169209377424-ng5i36j9o0f2gtnvig3uk16thi10n8lg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.medifo1",
+            "certificate_hash": "2264fcc5de5a9a373efddb0c5b280c194d6eb584"
+          }
+        },
+        {
+          "client_id": "169209377424-ljidnfp1f4ijdhnnr4vbi027nignbgb4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0i6hQhahp0kJjSZylg3pv3L4s_MbnzOY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "169209377424-ljidnfp1f4ijdhnnr4vbi027nignbgb4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
