@@ -1,10 +1,17 @@
 import 'dart:async';
+import 'package:medifo1/camera.dart';
 import 'package:medifo1/display.dart';
 import 'package:flutter/material.dart';
 import 'vision_text.dart';
+import 'package:camera/camera.dart';
+import 'camera.dart';
 
-Future main(List<String> arguments) async {
+List<CameraDescription> cameras;
+
+Future<Null> main(List<String> arguments) async {
+  WidgetsFlutterBinding.ensureInitialized();
   //print(await hacker_news_scraper.initiate(Client(),"wikoryl"));
+  cameras = await availableCameras();
 
 //void main() {
   runApp(MaterialApp(
@@ -15,9 +22,11 @@ Future main(List<String> arguments) async {
       '/': (context) => StartScreen(),
       '/vision_text': (context) => VisionTextWidget(),
       '/display': (context) => HomePage(),
+      '/camera':(context) => CameraExampleHome(cameras),
     },
-  ));
+  ),
 
+  );
   //print(await hacker_news_scraper.initiate(Client(),"wikoryl"));
 }
 

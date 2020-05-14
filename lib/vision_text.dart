@@ -6,10 +6,17 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:mlkit/mlkit.dart';
 import 'package:medifo1/display.dart' as display;
+import 'package:camera/camera.dart';
+
+List<CameraDescription> cameras;
 
 class VisionTextWidget extends StatefulWidget {
+
+
   @override
-  _VisionTextWidgetState createState() => _VisionTextWidgetState();
+  _VisionTextWidgetState createState() {
+    return _VisionTextWidgetState();
+  }
 }
 
 class _VisionTextWidgetState extends State<VisionTextWidget> {
@@ -34,10 +41,9 @@ class _VisionTextWidgetState extends State<VisionTextWidget> {
             title: Text('Text Detection'),
             backgroundColor: Colors.black87,
             leading: IconButton(
-              icon: Icon(Icons.arrow_back_ios),
-              tooltip: 'Back',
+              icon: Icon(Icons.photo_camera,color: Colors.white,),
               onPressed: () {
-                Navigator.pop(context);
+                Navigator.pushNamed(context, '/camera');
               },
             ),
           ),

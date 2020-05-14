@@ -2,9 +2,21 @@ import 'dart:convert';
 import 'package:http/http.dart';
 import 'package:html/parser.dart';
 import 'package:html/dom.dart';
-
+//import 'package:translator/translator.dart';
+import 'dart:async';
+//final translator = new GoogleTranslator();
+//String _textTranslated = "Aditya";
 Future initiate(BaseClient client,String s) async {
-  // Make API call to Hackernews homepage
+
+  /*_onTextChanged(String text) {
+    print(text);
+    translator.translate(text, to: 'fr').then((s){
+        _textTranslated = s;
+    });
+    print(_textTranslated);
+    return _textTranslated;
+  }*/
+
   Response response = await client.get('https://www.tabletwise.com/'+s+'-tablet');
   if (response.statusCode != 200) return response.body;
   // Use html parser
@@ -23,8 +35,8 @@ Future initiate(BaseClient client,String s) async {
 
   return json.encode(linkMap1);
 }
+
 Future initiate1(BaseClient client,String s) async {
-  // Make API call to Hackernews homepage
   Response response = await client.get('https://www.tabletwise.com/'+s+'-tablet');
   if (response.statusCode != 200) return response.body;
   // Use html parser

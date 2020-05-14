@@ -15,6 +15,7 @@ version: 1.0.0+1
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
+  flutter: ">=1.9.1+hotfix.4 <2.0.0"
 
 dependencies:
   html: ^0.14.0+3
@@ -29,11 +30,17 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
   mlkit: ^0.15.0
+  camera: ^0.5.7+4
+  path_provider: ^1.6.5
+  translator: ^0.1.0+7
   #path: ../
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_driver:
+    sdk: flutter
+  pedantic: ^1.8.0
 
 
 # For information on the generic Dart part of this file, see the
@@ -70,6 +77,13 @@ flutter:
     - family: Pacifico
       fonts:
         - asset: fonts/Pacifico-Regular.ttf
+    - family:  MyFlutterApp
+      fonts:
+        - asset: fonts/MyFlutterApp.ttf
+#* Elusive, Copyright (C) 2013 by Aristeides Stathopoul
+Author:    Aristeides Stathopoulos
+License:   SIL (http://scripts.sil.org/OFL)
+Homepage:  http://aristeides.com/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
