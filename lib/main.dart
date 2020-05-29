@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:flutter/cupertino.dart';
 import 'package:medifo1/camera.dart';
 import 'package:medifo1/display.dart';
 import 'package:flutter/material.dart';
@@ -46,8 +47,16 @@ class StartScreen extends StatelessWidget {
                 child: RaisedButton(
                   color: Colors.black87,
                   child: CircleAvatar(
-                    radius: 80.0,
-                    backgroundImage: AssetImage('images/ml.jpg'),
+                    backgroundColor: Colors.white,
+                    radius: 94.0,
+                    child: Padding(
+                      padding: const EdgeInsets.only(left:22.0),
+                      child: Image(
+                        image: AssetImage("images/medifo.jpg"),
+                        height: 120,
+                        //fit: BoxFit.fitHeight,
+                      ),
+                    ),
                   ),
                   onPressed: () {
                     // Navigate to the second screen using a named route

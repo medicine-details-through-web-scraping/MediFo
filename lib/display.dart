@@ -96,7 +96,10 @@ class _HomePageState extends State<HomePage> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Text(s),
+          title: Center(child: Padding(
+            padding: const EdgeInsets.only(right:60),
+            child: Text(s),
+          )),
           backgroundColor: Colors.teal.shade500,
           leading: IconButton(
             icon: Icon(Icons.arrow_back_ios),
@@ -163,11 +166,10 @@ class _HomePageState extends State<HomePage> {
                                       margin: EdgeInsets.only(right: 20.0 ),
                                       child: InkWell(
                                           onTap: (){
-                                            setState(() {
+
                                               customDialog(context,
                                                   _notes[index].title,
                                                   _notes1[index].title);
-                                            });
                                           },
                                           child: Icon(MyFlutterApp.english,size: 20.0,)
                                       ),
@@ -176,11 +178,10 @@ class _HomePageState extends State<HomePage> {
                                       margin: EdgeInsets.only(right: 20.0 ),
                                       child: InkWell(
                                           onTap: (){
-                                            setState(() {
                                               customDialog1(context,
                                                   _notes[index].title,
                                                   _notes1[index].title);
-                                            });
+
                                           },
                                           child: Icon(MyFlutterApp.hindi,size: 20.0,)
                                       ),
@@ -191,6 +192,7 @@ class _HomePageState extends State<HomePage> {
                                           onTap: (){
                                             customAvi2(_notes[index].title,
                                                 _notes1[index].title);
+
                                               customDialog2(context,
                                                   this._textTranslated3,
                                                   this._textTranslated2);
@@ -274,8 +276,9 @@ class _HomePageState extends State<HomePage> {
               ),
               child: SingleChildScrollView(
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  //crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
+
                     Container(
                       padding: EdgeInsets.all(10.0),
                       child: Text(title,
@@ -286,7 +289,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                     ),
-                    SizedBox(height: 6.0,),
+                    SizedBox(height: 6.0),
                     Container(
                       child: Padding(
                         padding: const EdgeInsets.all(10.0),
@@ -342,6 +345,7 @@ class _HomePageState extends State<HomePage> {
           else
           _textTranslated2 = translatedText;
     });
+
   _onTextChanged3(String text)=> _translator
         .translate(text,
         from: 'en',
@@ -353,6 +357,7 @@ class _HomePageState extends State<HomePage> {
             _textTranslated3 = translatedText;
 
     });
+
   customDialog1(BuildContext context,String title,String des){
     _onTextChanged1(des);
     _onTextChanged(title);
@@ -396,7 +401,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
 
-                    SizedBox(height: 6.0,),
+                    SizedBox(height: 6.0),
                     Container(
                       child: Padding(
                         padding: const EdgeInsets.all(10.0),
@@ -416,6 +421,7 @@ class _HomePageState extends State<HomePage> {
         }
     );
   }
+
   customAvi2(String title,String des){
     _onTextChanged2(des);
     _onTextChanged3(title);
